@@ -22,9 +22,9 @@ source $CATISSUE_ADMIN_PROCS_HOME/bin/common/functions.sh
 
 #
 # Copy the pdos
-rsync -avz --delete ${CATISSUE_SOURCE_PDO} ${I2B2_HOSTNAME}:${I2B2_DESTINATION_PDO}
+rsync -avz --omit-dir-times --delete ${CATISSUE_SOURCE_PDO} ${I2B2_HOSTNAME}:${I2B2_DESTINATION_PDO}
 
 #
 # Copy the enums
-rsync -avz --delete ${CATISSUE_SOURCE_ENUMS} ${I2B2_HOSTNAME}:${I2B2_DESTINATION_ENUMS}
+rsync -avz --omit-dir-times --delete ${CATISSUE_SOURCE_ENUMS} ${I2B2_HOSTNAME}:${I2B2_DESTINATION_ENUMS}
 
